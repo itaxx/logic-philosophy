@@ -15,11 +15,34 @@
 \section{Chapter one}
 \section{Chapter two}
 \subsection{Disjunction}
-We need to show that for any wff $\varphi$ and $\chi$, and any PL-interpretation $\mathcal{I}$, V$\mathcal{_J}$($\varphi\vee\chi$)=1 iff either V$\mathcal{_J}$($\varphi$)=1 or V$\mathcal{_J}$($\chi$)=1. We must first notice that ($\varphi \vee \chi$) is just shorthand for ($\sim\varphi\rightarrow\chi$), so that what we need to show is that for any wff $\varphi$ and $\chi$, and any PL-interpretation $\mathcal{I}$, V$\mathcal{_J}$($\sim\varphi\rightarrow\chi$)=1 iff either V$\mathcal{_J}$($\varphi$)=1 or V$\mathcal{_J}$($\chi$)=1. This can be done by showing, first that, if V$\mathcal{_J}$($\sim\varphi\rightarrow\chi$)=1 then V$\mathcal{_J}$($\varphi$)=1 or V$\mathcal{_J}$($\chi$)=1, and subsequently that, if V$\mathcal{_J}$($\varphi$)=1 or V$\mathcal{_J}$($\chi$)=1 then V$\mathcal{_J}$($\sim\varphi \rightarrow\chi$)=1.
+We need to show that for any wff $\varphi$ and $\chi$, 
+and any PL-interpretation $\mathcal{I}$, 
+V$\mathcal{_J}$($\varphi\vee\chi$)=1 iff either V$\mathcal{_J}$($\varphi$)=1 or V$\mathcal{_J}$($\chi$)=1. 
+We must first notice that ($\varphi \vee \chi$) is just shorthand for ($\sim\varphi\rightarrow\chi$), 
+so that what we need to show is that for any wff $\varphi$ and $\chi$, 
+and any PL-interpretation $\mathcal{I}$, V$\mathcal{_J}$($\sim\varphi\rightarrow\chi$)=1 iff either V$\mathcal{_J}$($\varphi$)=1 or V$\mathcal{_J}$($\chi$)=1. 
+This can be done by showing, first, that, 
+if V$\mathcal{_J}$($\sim\varphi\rightarrow\chi$)=1 then V$\mathcal{_J}$($\varphi$)=1 or V$\mathcal{_J}$($\chi$)=1, 
+and subsequently that, if V$\mathcal{_J}$($\varphi$)=1 or V$\mathcal{_J}$($\chi$)=1 then V$\mathcal{_J}$($\sim\varphi \rightarrow\chi$)=1.
 
-Let us start by proving that if V$\mathcal{_J}$($\sim\varphi\rightarrow\chi$)=1, then either V$\mathcal{_J}$($\varphi$)=1 or V$\mathcal{_J}$($\chi$)=1. We first assume that V$\mathcal{_J}$($\sim\varphi\rightarrow\chi$)=1. Recall that we have defined the valuation function for $\rightarrow$ as follows: V$\mathcal{_J}$($\phi\rightarrow\psi$)=1 iff either V$\mathcal{_J}$($\phi$)=0 or V$\mathcal{_J}$($\psi$)=1. Given our assumption, we can therefore say that either V$\mathcal{_J}$($\sim\varphi$)=0 or V$\mathcal{_J}$($\chi$)=1. But then, given the definition for the valuation function for $\sim$, which is V$\mathcal{_J}$($\sim\phi$)=1 iff V$\mathcal{_J}$($\phi$)=0, we can say that either V$\mathcal{_J}$($\varphi$)=1 or V$\mathcal{_J}$($\chi$)=1. This is what we wanted to show.
+Let us start by proving that if V$\mathcal{_J}$($\sim\varphi\rightarrow\chi$)=1, 
+then either V$\mathcal{_J}$($\varphi$)=1 or V$\mathcal{_J}$($\chi$)=1. 
+We first assume that V$\mathcal{_J}$($\sim\varphi\rightarrow\chi$)=1. 
+Recall that we have defined the valuation function for $\rightarrow$ as follows: 
+V$\mathcal{_J}$($\phi\rightarrow\psi$)=1 iff either V$\mathcal{_J}$($\phi$)=0 or V$\mathcal{_J}$($\psi$)=1. 
+Given our assumption, we can therefore say that either V$\mathcal{_J}$($\sim\varphi$)=0 or V$\mathcal{_J}$($\chi$)=1. 
+But then, given the definition for the valuation function for $\sim$, 
+which is V$\mathcal{_J}$($\sim\phi$)=1 iff V$\mathcal{_J}$($\phi$)=0, 
+we can say that either V$\mathcal{_J}$($\varphi$)=1 or V$\mathcal{_J}$($\chi$)=1. 
+This is what we wanted to show.
 
-The second stage of the proof requires us to prove that if V$\mathcal{_J}$($\varphi$)=1 or V$\mathcal{_J}$($\chi$)=1 then V$\mathcal{_J}$($\sim\varphi\rightarrow\chi$)=1. So, let us assume that either V$\mathcal{_J}$($\varphi$)=1 or V$\mathcal{_J}$($\chi$)=1. By the valuation function for $\sim$, we see how our assumption implies that either  V$\mathcal{_J}$($\sim\varphi$)=0 or V$\mathcal{_J}$($\chi$)=1. And so, subsequently, by the valuation function for $\rightarrow$, we can demonstrate that our assumption implies that V$\mathcal{_J}$($\sim\varphi\rightarrow\chi$)=1. $\square$
+The second stage of the proof requires us to prove that 
+if V$\mathcal{_J}$($\varphi$)=1 or V$\mathcal{_J}$($\chi$)=1 then V$\mathcal{_J}$($\sim\varphi\rightarrow\chi$)=1. 
+So, let us assume that either V$\mathcal{_J}$($\varphi$)=1 or V$\mathcal{_J}$($\chi$)=1. 
+By the valuation function for $\sim$, 
+we see how our assumption implies that either  V$\mathcal{_J}$($\sim\varphi$)=0 or V$\mathcal{_J}$($\chi$)=1. 
+And so, subsequently, by the valuation function for $\rightarrow$, 
+we can demonstrate that our assumption implies that V$\mathcal{_J}$($\sim\varphi\rightarrow\chi$)=1. $\square$
 
 
 \subsection{Equivalence}

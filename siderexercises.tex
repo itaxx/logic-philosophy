@@ -14,7 +14,7 @@
 
 \section{Chapter one}
 \section{Chapter two}
-\subsection{Disjunction and equivalence}
+\subsection{Valuation functions for disjunction and equivalence}
 \paragraph{(a)} We need to show that for any wff $\varphi$ and $\chi$, 
 and any PL-interpretation $\mathcal{I}$, 
 V$\mathcal{_J}$($\varphi\vee\chi$)=1 iff either V$\mathcal{_J}$($\varphi$)=1 or V$\mathcal{_J}$($\chi$)=1. 
@@ -56,6 +56,7 @@ First, we demonstrate that if we assume $V\mathcal{_J}(\phi)=1$ and that $V\math
 Second, we demonstrate that if we assume $V\mathcal{_J}(\phi)=0$ and that $V\mathcal{_J}(\chi)=0$, it equally follows that $V\mathcal{_J}(\sim((\phi\rightarrow\chi)\rightarrow\sim(\chi\rightarrow\phi)))=1$. Again, the valuation function of $\rightarrow$ and $\sim$ allow us to say that $V\mathcal{_J}(\phi\rightarrow\chi)=1$ and that $V\mathcal{_J}(\sim(\chi\rightarrow\phi))=0$. As shown, this implies that $V\mathcal{_J}((\phi\rightarrow\chi)\rightarrow\sim(\chi\rightarrow\phi))=0$, which in turn implies that $V\mathcal{_J}(\sim((\phi\rightarrow\chi)\rightarrow\sim(\chi\rightarrow\phi)))=1$. $\square$
 
 \subsection{Logical consequence}
+
 \paragraph{(a)} We need to establish that $\vDash[P\wedge (Q\vee R)]\rightarrow[(P\wedge Q)\vee(P\wedge R)]$. 
 We can prove this by reductio. 
 So let $\mathcal{J}$ be any PL-interpretation, and let us assume that 
@@ -87,9 +88,48 @@ $V\mathcal{_J}(P\leftrightarrow Q)\vee(R\leftrightarrow S)=1$.
 But then, given our definition of the valuation function $\vee$, we can say that 
 $V\mathcal{_J}(P\vee R)=0$. $\square$ 
 
-\paragraph{(c)}  
+\paragraph{(c)} We need to establish that $\sim(P\wedge Q)$ and $\sim P\vee\sim Q$ are semantically equivalent. 
+This, in effect, means that proof is required for $\vDash (\sim(P\wedge Q))\leftrightarrow(\sim P\vee\sim Q)$. 
+We can proceed in two stages. 
+First, we demonstrate that $\vDash (\sim(P\wedge Q))\rightarrow(\sim P\vee\sim Q)$, 
+and, subsequently, that $\vDash (\sim P\vee\sim Q)\rightarrow(\sim(P\wedge Q))$. 
 
+We prove that $\vDash (\sim(P\wedge Q))\rightarrow(\sim P\vee\sim Q)$ by reductio. 
+So let $\mathcal{J}$ be any PL-interpretation, and let us assume that 
+$V\mathcal{_J}(\sim(P\wedge Q))\rightarrow(\sim P\vee\sim Q)=0$. 
+Given our definition of the valuation function $\rightarrow$, we can say that 
+$V\mathcal{_J}(\sim(P\wedge Q))=1$, and that 
+$V\mathcal{_J}(\sim P\vee\sim Q)=0$. 
+By our definition of the valuation functions $\sim$ and $\wedge$, we see that 
+$V\mathcal{_J}(P\wedge Q)=0$, and so that not both $\mathcal{J}(P)=1$ and $\mathcal{J}(Q)=1$.
+But by our definition of the valuation function $\vee$, we also see that 
+$V\mathcal{_J}(\sim P)=0$ and 
+$V\mathcal{_J}(\sim Q)=0$. 
+Using again our definition for the valuation function $\sim$, this implies that both 
+$\mathcal{J}(P)=1$ and 
+$\mathcal{J}(Q)=1$.
+From our assumption, we have derived a contradiction. 
 
+We now prove that $\vDash (\sim P\vee\sim Q)\rightarrow(\sim(P\wedge Q))$, again by reductio. 
+So let $\mathcal{J}$ be any PL-interpretation, and let us assume that 
+$V\mathcal{_J}(\sim P\vee\sim Q)\rightarrow(\sim(P\wedge Q))=0$. 
+Given our definition of the valuation function $\rightarrow$, we can say that 
+$V\mathcal{_J}(\sim P\vee\sim Q)=1$, and that
+$V\mathcal{_J}(\sim(P\wedge Q))=0$. 
+By our definition of the valuation function $\vee$ and $\sim$, we see that not both 
+$V\mathcal{_J}(\sim P)=0$ and 
+$V\mathcal{_J}(\sim Q)=0$, and so that not both 
+$\mathcal{J}(P)=1$ and 
+$\mathcal{J}(Q)=1$. 
+Now, by our definition of the valuation function $\sim$, we see that 
+$V\mathcal{_J}(P\wedge Q)=1$.
+Notice, however, that given the valuation function $\wedge$, 
+it follows that both 
+$\mathcal{J}(P)=1$ and 
+$\mathcal{J}(Q)=1$.
+And again we have derived a contradiction from our assumption. $\square$ 
+
+ 
 
 
 %Bibliography: \standardbib just loads a regular bibliography. All files have been loaded in the preamble.

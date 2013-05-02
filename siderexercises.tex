@@ -68,10 +68,24 @@ Given our definitions of the valuation function $\wedge$ and $\vee$, we can say 
 (\emph{iv}) $V\mathcal{_J}(P\wedge Q)=0$ (from (\emph{ii})), and so that 
 (\emph{v}) $\mathcal{J}(P)=0$ (from (\emph{ii})). 
 We have now derived a contradiction from our assumption (\emph{iii} \& \emph{v}), 
-and so $V\mathcal{_J}((P\wedge (Q\vee R))\rightarrow((P\wedge Q)\vee(P\wedge R)))=1$.
+and so $V\mathcal{_J}((P\wedge (Q\vee R))\rightarrow((P\wedge Q)\vee(P\wedge R)))=1$. $\square$
 
-\paragraph{(b)} We need to establish that $(P\leftrightarrow Q)\vee(R\leftrightarrow S)\nvDash P\vee R$ 
-
+\paragraph{(b)} We need to establish that $(P\leftrightarrow Q)\vee(R\leftrightarrow S)\nvDash P\vee R$.
+We can do this by finding an interpretation of $P$, $Q$, $R$, and $S$ such that 
+$V\mathcal{_J}(P\leftrightarrow Q)\vee(R\leftrightarrow S)=1$ and 
+$V\mathcal{_J}(P\vee R)=0$. 
+So, let $\mathcal{J}$ be an interpretation such that 
+$\mathcal{J}(P)=0$, 
+$\mathcal{J}(Q)=0$, 
+$\mathcal{J}(R)=0$, and 
+$\mathcal{S}(P)=0$. 
+Given our definition of the valuation function $\leftrightarrow$, we can say that 
+$V\mathcal{_J}(P\leftrightarrow Q)=1$, and that 
+$V\mathcal{_J}(R\leftrightarrow S)=1$.
+And given our definition of the valuation function $\vee$ this implies that 
+$V\mathcal{_J}(P\leftrightarrow Q)\vee(R\leftrightarrow S)=1$. 
+But then, given our definition of the valuation function $\vee$, we can say that 
+$V\mathcal{_J}(P\vee R)=0$. $\square$ 
 
 \paragraph{(c)}  
 

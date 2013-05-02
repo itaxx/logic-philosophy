@@ -1,0 +1,45 @@
+\documentclass[sloppy, journal, git, bytitle]{humapap}
+% NOTE: This document makes use of the 'humapap' class. I'm still working on that class, but hope soon to include it in this repository.
+
+\usepackage{fouriernc}
+\theaffiliation{university college london}
+\thetitle {logic for philosophy} % Fist page (no caps is fine)
+\thehtitle{the header} % Title in the header (no caps is fine)
+\mydescription{UCL reading group on ted sider's book} % Hovers over the title. Can be left blank (~)
+\thejournal{the journal}
+\theyear{2013}
+\remote{~}
+\begin{document}
+\documenttitle
+
+\section{Chapter one}
+\section{Chapter two}
+\subsection{Disjunction}
+We need to show that for any wff $\varphi$ and $\chi$, and any PL-interpretation $\mathcal{I}$, V$\mathcal{_J}$($\varphi\vee\chi$)=1 iff either V$\mathcal{_J}$($\varphi$)=1 or V$\mathcal{_J}$($\chi$)=1. We must first notice that ($\varphi \vee \chi$) is just shorthand for ($\sim\varphi\rightarrow\chi$), so that what we need to show is that for any wff $\varphi$ and $\chi$, and any PL-interpretation $\mathcal{I}$, V$\mathcal{_J}$($\sim\varphi\rightarrow\chi$)=1 iff either V$\mathcal{_J}$($\varphi$)=1 or V$\mathcal{_J}$($\chi$)=1. This can be done by showing, first that, if V$\mathcal{_J}$($\sim\varphi\rightarrow\chi$)=1 then V$\mathcal{_J}$($\varphi$)=1 or V$\mathcal{_J}$($\chi$)=1, and subsequently that, if V$\mathcal{_J}$($\varphi$)=1 or V$\mathcal{_J}$($\chi$)=1 then V$\mathcal{_J}$($\sim\varphi \rightarrow\chi$)=1.
+
+Let us start by proving that if V$\mathcal{_J}$($\sim\varphi\rightarrow\chi$)=1, then either V$\mathcal{_J}$($\varphi$)=1 or V$\mathcal{_J}$($\chi$)=1. We first assume that V$\mathcal{_J}$($\sim\varphi\rightarrow\chi$)=1. Recall that we have defined the valuation function for $\rightarrow$ as follows: V$\mathcal{_J}$($\phi\rightarrow\psi$)=1 iff either V$\mathcal{_J}$($\phi$)=0 or V$\mathcal{_J}$($\psi$)=1. Given our assumption, we can therefore say that either V$\mathcal{_J}$($\sim\varphi$)=0 or V$\mathcal{_J}$($\chi$)=1. But then, given the definition for the valuation function for $\sim$, which is V$\mathcal{_J}$($\sim\phi$)=1 iff V$\mathcal{_J}$($\phi$)=0, we can say that either V$\mathcal{_J}$($\varphi$)=1 or V$\mathcal{_J}$($\chi$)=1. This is what we wanted to show.
+
+The second stage of the proof requires us to prove that if V$\mathcal{_J}$($\varphi$)=1 or V$\mathcal{_J}$($\chi$)=1 then V$\mathcal{_J}$($\sim\varphi\rightarrow\chi$)=1. So, let us assume that either V$\mathcal{_J}$($\varphi$)=1 or V$\mathcal{_J}$($\chi$)=1. By the valuation function for $\sim$, we see how our assumption implies that either  V$\mathcal{_J}$($\sim\varphi$)=0 or V$\mathcal{_J}$($\chi$)=1. And so, subsequently, by the valuation function for $\rightarrow$, we can demonstrate that our assumption implies that V$\mathcal{_J}$($\sim\varphi\rightarrow\chi$)=1. $\square$
+
+
+\subsection{Equivalence}
+We need to show that for any wff $\varphi$ and $\chi$, and any PL-interpretation $\mathcal{I}$, $V\mathcal{_J}(\varphi\leftrightarrow\chi)=1$ iff $V\mathcal{_J}(\phi)$ = $V\mathcal{_J}(\chi)$. We begin by noting that $\phi\leftrightarrow\psi$ is shorthand for $(\phi\rightarrow\psi)\wedge(\psi\rightarrow\phi)$, and that the latter in its turn is shorthand for $(\sim(\phi\rightarrow\psi)\rightarrow\sim(\psi\rightarrow\phi))$.  
+This means that what we need to show is that, for any wff $\varphi$ and $\chi$, and any PL-interpretation $\mathcal{I}$, $V\mathcal{_J}(\sim((\phi\rightarrow\chi)\rightarrow\sim(\chi\rightarrow\phi)))=1$ iff $V\mathcal{_J}(\phi)$ = $V\mathcal{_J}(\chi)$. This can be done by showing, first that, if $V\mathcal{_J}(\sim((\phi\rightarrow\chi)\rightarrow\sim(\chi\rightarrow\phi)))=1$ then $V\mathcal{_J}(\phi)$ = $V\mathcal{_J}(\chi)$, and, subsequently, that if $V\mathcal{_J}(\phi)$ = $V\mathcal{_J}(\chi)$, then $V\mathcal{_J}(\sim((\phi\rightarrow\chi)\rightarrow\sim(\chi\rightarrow\phi)))=1$. 
+
+Let us start by proving that if $V\mathcal{_J}(\sim((\phi\rightarrow\chi)\rightarrow\sim(\chi\rightarrow\phi)))=1$ then $V\mathcal{_J}(\phi)$ = $V\mathcal{_J}(\chi)$. We proceed by reductio, and so start by assuming that $V\mathcal{_J}(\phi) \neq  V\mathcal{_J}(\chi)$. This allows us to assume that, say, $V\mathcal{_J}(\phi)=1$ and that $V\mathcal{_J}(\chi)=0$. Recall that we have defined the valuation function for $\rightarrow$ as follows: $V\mathcal{_J}(\phi\rightarrow\psi)=1$ iff either $V\mathcal{_J}(\phi)=0$ or $V\mathcal{_J}(\psi)=1$. The converse of this is that $V\mathcal{_J}(\phi\rightarrow\psi)=0$ iff $V\mathcal{_J}(\phi)=1$ and $V\mathcal{_J}(\psi)=0$. We see that our assumptions about the valuation interpretation for $\psi$ and $\chi$ imply that $V\mathcal{_J}(\phi\rightarrow\chi)=0$. We now introduce the further assumption that $V\mathcal{_J}(\sim((\phi\rightarrow\chi)\rightarrow\sim(\chi\rightarrow\phi)))=1$, which is just the antecedent of the conditional we are trying to prove. By the definition of the valuation function of $\sim$, we see that $V\mathcal{_J}((\phi\rightarrow\chi)\rightarrow\sim(\chi\rightarrow\phi))=0$. But if we again rely on our definition of the valuation function of $\rightarrow$, we can demonstrate that $V\mathcal{_J}(\phi\rightarrow\chi)=1$ (and that $V\mathcal{_J}(\sim(\chi\rightarrow\phi))=0$). But we have already demonstrated that $V\mathcal{_J}(\phi\rightarrow\chi)=0$, and so we have a contradiction. This allows us to reject the assumption that $V\mathcal{_J}(\phi) \neq  V\mathcal{_J}(\chi)$, and so we have shown that $V\mathcal{_J}(\sim((\phi\rightarrow\chi)\rightarrow\sim(\chi\rightarrow\phi)))=1$ then $V\mathcal{_J}(\phi)$ = $V\mathcal{_J}(\chi)$.
+
+Now we still need to prove that if $V\mathcal{_J}(\phi)$ = $V\mathcal{_J}(\chi)$, then $V\mathcal{_J}(\sim((\phi\rightarrow\chi)\rightarrow\sim(\chi\rightarrow\phi)))=1$. We assume that $V\mathcal{_J}(\phi)$ = $V\mathcal{_J}(\chi)$, and so can assume that either $V\mathcal{_J}(\phi)=1$ and that $V\mathcal{_J}(\chi)=1$, or that $V\mathcal{_J}(\phi)=0$ and that $V\mathcal{_J}(\chi)=0$. We proceed in two straightforward stages.  
+
+First, we demonstrate that if we assume $V\mathcal{_J}(\phi)=1$ and that $V\mathcal{_J}(\chi)=1$, it follows that $V\mathcal{_J}(\sim((\phi\rightarrow\chi)\rightarrow\sim(\chi\rightarrow\phi)))=1$. We assume that $V\mathcal{_J}(\phi)=1$ and that $V\mathcal{_J}(\chi)=1$. Using our definitions for the valuation function of $\rightarrow$ and $\sim$, we can say that $V\mathcal{_J}(\phi\rightarrow\chi)=1$ and that $V\mathcal{_J}(\sim(\chi\rightarrow\phi))=0$. But this implies that $V\mathcal{_J}((\phi\rightarrow\chi)\rightarrow\sim(\chi\rightarrow\phi))=0$, which in turn implies that $V\mathcal{_J}(\sim((\phi\rightarrow\chi)\rightarrow\sim(\chi\rightarrow\phi)))=1$. This is the desired result. 
+
+Second, we demonstrate that if we assume $V\mathcal{_J}(\phi)=0$ and that $V\mathcal{_J}(\chi)=0$, it equally follows that $V\mathcal{_J}(\sim((\phi\rightarrow\chi)\rightarrow\sim(\chi\rightarrow\phi)))=1$. Again, the valuation function of $\rightarrow$ and $\sim$ allow us to say that $V\mathcal{_J}(\phi\rightarrow\chi)=1$ and that $V\mathcal{_J}(\sim(\chi\rightarrow\phi))=0$. As shown, this implies that $V\mathcal{_J}((\phi\rightarrow\chi)\rightarrow\sim(\chi\rightarrow\phi))=0$, which in turn implies that $V\mathcal{_J}(\sim((\phi\rightarrow\chi)\rightarrow\sim(\chi\rightarrow\phi)))=1$. $\square$
+
+
+ 
+
+
+
+
+%Bibliography: \standardbib just loads a regular bibliography. All files have been loaded in the preamble.
+\standardbib
+\end{document}

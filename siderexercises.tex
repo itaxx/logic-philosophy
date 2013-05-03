@@ -132,10 +132,23 @@ And again we have derived a contradiction from our assumption. $\square$
 \subsection{Sequent proofs in PL}
 
 \paragraph{(a)} We need to prove that $P\rightarrow (Q\rightarrow R)\Rightarrow (Q\wedge\sim R)\rightarrow\sim P$
+\begin{enumerate}
+	\item $P\rightarrow (Q\rightarrow R)\Rightarrow P\rightarrow (Q\rightarrow R)$ \hfil (RA)
+	\item $Q\wedge\sim R\Rightarrow Q\wedge\sim R$ \hfil (RA)
+	\item $P\Rightarrow P$ \hfil (RA, for reductio)
+	\item $P, P\rightarrow (Q\rightarrow R)\Rightarrow Q\rightarrow R$ \hfil (1,3, $\rightarrow$E)
+	\item $Q\wedge\sim R\Rightarrow Q$ \hfil (2, $\wedge$E)
+	\item $P, P\rightarrow (Q\rightarrow R), Q\wedge\sim R\Rightarrow R$ \hfil (4, 5, $\rightarrow$E)
+	\item $P, P\rightarrow (Q\rightarrow R), Q\wedge\sim R\Rightarrow \sim R$ \hfil (6, $\wedge$E)
+	\item $P, P\rightarrow (Q\rightarrow R), Q\wedge\sim R\Rightarrow R\wedge\sim R$ \hfil (6, 7, $\wedge$I)
+	\item $P\rightarrow (Q\rightarrow R), Q\wedge\sim R\Rightarrow\sim P$ \hfil (8, RAA)
+	\item $P\rightarrow (Q\rightarrow R)\Rightarrow(Q\wedge\sim R)\rightarrow\sim P$ \hfil (9, $\rightarrow$I)
+\end{enumerate}
 
 
+\paragraph{(b)} We need to prove that $P, Q, R\Rightarrow P$.
 
-\paragraph{(b)} We need to prove that $P, Q, R\Rightarrow P$
+
 
 \paragraph{(c)} We need to prove that $P\rightarrow Q, R\rightarrow Q \Rightarrow (P\vee R)\rightarrow Q$. 
 \begin{enumerate}

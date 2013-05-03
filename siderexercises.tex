@@ -147,7 +147,15 @@ And again we have derived a contradiction from our assumption. $\square$
 
 
 \paragraph{(b)} We need to prove that $P, Q, R\Rightarrow P$.
-
+\begin{enumerate}
+	\item $P\Rightarrow P$ \hfil (RA)
+	\item $Q\Rightarrow Q$ \hfil (RA)
+	\item $R\Rightarrow R$ \hfil (RA)
+	\item $Q, R\Rightarrow Q\wedge R$ \hfil (2, 3, $\wedge$I)
+	\item $Q, R\Rightarrow Q$ \hfil (4 $\wedge$E)
+	\item $P, Q, R\Rightarrow P\wedge Q$ \hfil (1, 5, $\wedge$I)
+	\item $P, Q, R\Rightarrow P$ \hfil (6 $\wedge$E)
+\end{enumerate}
 
 
 \paragraph{(c)} We need to prove that $P\rightarrow Q, R\rightarrow Q \Rightarrow (P\vee R)\rightarrow Q$. 

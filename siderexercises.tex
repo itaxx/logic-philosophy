@@ -133,9 +133,22 @@ And again we have derived a contradiction from our assumption. $\square$
 
 \paragraph{(a)} We need to prove that $P\rightarrow (Q\rightarrow R)\Rightarrow (Q\wedge\sim R)\rightarrow\sim P$
 
+
+
 \paragraph{(b)} We need to prove that $P, Q, R\Rightarrow P$
 
-\paragraph{(c)} We need to prove that $P\rightarrow Q, R\rightarrow Q \Rightarrow (P\vee R)\rightarrow Q$
+\paragraph{(c)} We need to prove that $P\rightarrow Q, R\rightarrow Q \Rightarrow (P\vee R)\rightarrow Q$. 
+\begin{enumerate}
+	\item $P\Rightarrow P$ \hfil (RA)
+	\item $R\Rightarrow R$ \hfil (RA)
+	\item $P\vee R\Rightarrow P\vee R$ \hfil (RA)
+	\item $P\rightarrow Q\Rightarrow P\rightarrow Q$ \hfil (RA)
+	\item $R\rightarrow Q\Rightarrow R\rightarrow Q$ \hfil (RA)
+	\item $P\rightarrow Q, P \Rightarrow Q$ \hfil (1, 4, $\rightarrow$E)
+	\item $R\rightarrow Q, R \Rightarrow Q$ \hfil (2, 5, $\rightarrow$E)
+	\item $P\rightarrow Q, R\rightarrow Q, P\vee R\Rightarrow Q$ \hfil (3, 6, 7, $\vee$E)
+	\item $P\rightarrow Q, R\rightarrow Q\Rightarrow (P\vee R)\rightarrow Q$ \hfil (8, $\rightarrow$I)
+\end{enumerate}
 
 
  

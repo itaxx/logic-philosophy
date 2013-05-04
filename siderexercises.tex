@@ -77,15 +77,23 @@ We can prove this by reductio.
 So let $\mathcal{J}$ be any PL-interpretation, and let us assume that 
 $V\mathcal{_J}((P\wedge (Q\vee R))\rightarrow((P\wedge Q)\vee(P\wedge R)))=0$. 
 Given our definition of the valuation function $\rightarrow$, we can say that 
-(\emph{i}) $V\mathcal{_J}(P\wedge (Q\vee R))=1$, and that
-(\emph{ii}) $V\mathcal{_J}((P\wedge Q)\vee(P\wedge R))=0$.
+(\emph{i}) $V\mathcal{_J}(P\wedge (Q\vee R))=1$, and that 
+(\emph{ii}) $V\mathcal{_J}((P\wedge Q)\vee(P\wedge R))=0$. 
 Given our definitions of the valuation function $\wedge$ and $\vee$, we can say that 
 (\emph{iii}) $\mathcal{J}(P)=1$ (from \emph{i}), and that 
-(\emph{iv}) $V\mathcal{_J}(P\wedge Q)=0$ (from \emph{ii}), and so that 
-% THERE IS A MISTAKE HERE
-(\emph{v}) $\mathcal{J}(P)=0$ (from \emph{ii}). 
-We have now derived a contradiction from our assumption (from \emph{iii} \& \emph{v}), 
-and so $V\mathcal{_J}((P\wedge (Q\vee R))\rightarrow((P\wedge Q)\vee(P\wedge R)))=1$. $\square$
+(\emph{iv}) $V\mathcal{_J}(P\wedge Q)=0$ (from \emph{ii}). 
+By the valuation function of $\wedge$, this means that 
+(\emph{v}) $\mathcal{J}(Q)=0$ (from \emph{iii \& iv}). 
+
+Now, given both these interpretations of $P$ and $Q$, we can demonstrate that \emph{i} implies that 
+(\emph{vi}) $V\mathcal{_J}(Q\vee R)=1$ (by $\wedge$ and $\mathcal{J}(P)$), 
+and so that $\mathcal{J}(R)=1$ (by $\vee$, \emph{vi}, \& $\mathcal{J}(Q)$). 
+But given our valuation function for $\wedge$, we see that our interpretations of $P$ and $Q$ also imply  
+(\emph{vii}) $V\mathcal{_J}(P\wedge Q)=0$. 
+And so we can show that \emph{ii} implies that 
+$V\mathcal{_J}(P\wedge R)=0$ (by $\vee$ \& \emph{vii}), and so that 
+$\mathcal{J}(R)=0$ (by $\wedge$ \& $\mathcal{J}(P)$). 
+So, we have derived both $\mathcal{J}(R)=1$ and $\mathcal{J}(R)=0$, which is absurd. $\square$
 
 \paragraph{(b)} We need to establish that $(P\leftrightarrow Q)\vee(R\leftrightarrow S)\nvDash P\vee R$.
 We can do this by finding an interpretation of $P$, $Q$, $R$, and $S$ such that 

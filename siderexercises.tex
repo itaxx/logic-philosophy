@@ -196,7 +196,7 @@ $R\rightarrow Q\Rightarrow R\rightarrow Q$ & (RA) \\
 $P\rightarrow Q, P \Rightarrow Q$ & (1, 4, $\rightarrow$E) \\
 $R\rightarrow Q, R \Rightarrow Q$ & (2, 5, $\rightarrow$E) \\
 $P\rightarrow Q, R\rightarrow Q, P\vee R\Rightarrow Q$ & (3, 6, 7, $\vee$E) \\
-$P\rightarrow Q, R\rightarrow Q\Rightarrow (P\vee R)\rightarrow Q$ & (8, $\rightarrow$I) \\
+$P\rightarrow Q, R\rightarrow Q\Rightarrow (P\vee R)\rightarrow Q$ & (8, $\rightarrow$I) 
 \end{fitch}
 \end{equation*}
 
@@ -208,7 +208,7 @@ $(P\rightarrow((P\rightarrow P)\rightarrow P))\rightarrow ((P\rightarrow(P\right
 $P\rightarrow ((P\rightarrow P)\rightarrow P)$ & PL1 \\
 $(P\rightarrow (P\rightarrow P))\rightarrow(P\rightarrow P)$ & 1,2,MP \\
 $P\rightarrow (P\rightarrow P)$ & PL1 \\
-$P\rightarrow P$ & 3,4 MP \\
+$P\rightarrow P$ & 3,4 MP 
 \end{fitch}
 \end{equation*}
 
@@ -222,13 +222,23 @@ $(\sim P\rightarrow (\sim P\rightarrow \sim P))\rightarrow(\sim P\rightarrow \si
 $\sim P\rightarrow (\sim P\rightarrow \sim P)$ & PL1 \\
 $\sim P\rightarrow \sim P$ & 3,4 MP \\
 $(\sim P\rightarrow \sim P)\rightarrow(\sim P\rightarrow P)\rightarrow P$ & PL3 \\
-$(\sim P\rightarrow P)\rightarrow P$ & 5,6,MP \\
+$(\sim P\rightarrow P)\rightarrow P$ & 5,6,MP 
 \end{fitch}
 \end{equation*}
 
 
 \paragraph{(c)} We need to prove that $\sim\sim P\vdash P$
-
+\begin{equation*}
+\begin{fitch}
+$\sim \sim P$ & premise \\
+$\sim \sim P\rightarrow(\sim P\rightarrow\sim \sim P)$ & PL1 \\
+$\sim P\rightarrow \sim \sim P$ & 1,2,MP \\
+$(\sim P\rightarrow \sim \sim P)\rightarrow((\sim P\rightarrow \sim P)\rightarrow P)$ & PL3 \\
+$(\sim P\rightarrow \sim P)\rightarrow P$ & 3,4,MP \\
+$\sim P\rightarrow \sim P$ & premise, 2.4(b) \\
+$P$ & 5,6,MP
+\end{fitch}
+\end{equation*}
 % \begin{equation*}
 %   \begin{fitch}
 %     \fh \forall y\lnot P(y)                             \\

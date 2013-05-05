@@ -198,25 +198,27 @@ And again we have derived a contradiction from our assumption. $\square$
 
 \subsection{Axiomatic proofs in PL}
 \paragraph{(a)} We need to prove that $\vdash P\rightarrow P$
+{\footnotesize
 \begin{enumerate}
 	\item $(P\rightarrow((P\rightarrow P)\rightarrow P))\rightarrow ((P\rightarrow(P\rightarrow P))\rightarrow(P\rightarrow P))$ \hfil PL2
 	\item $P\rightarrow ((P\rightarrow P)\rightarrow P)$ \hfil PL1
 	\item $(P\rightarrow (P\rightarrow P))\rightarrow(P\rightarrow P)$ \hfil 1,2,MP
 	\item $P\rightarrow (P\rightarrow P)$ \hfil PL1
 	\item $P\rightarrow P$ \hfil 3,4 MP
-\end{enumerate}
-
+\end{enumerate}}
 
 \paragraph{(b)} We need to prove that $\vdash(\sim P\rightarrow P)\rightarrow P$
+{\footnotesize
 \begin{enumerate}
-	\item $(\sim P\rightarrow((\sim P\rightarrow \sim P)\rightarrow \sim P))\rightarrow ((\sim P\rightarrow(\sim P\rightarrow \sim P))\rightarrow(\sim P\rightarrow \sim P))$ \hfil PL2
+	\item $(\sim P\rightarrow((\sim P\rightarrow \sim P)\rightarrow \sim P))\rightarrow \\ ((\sim P\rightarrow(\sim P\rightarrow \sim P))\rightarrow(\sim P\rightarrow \sim P))$ \hfil PL2
 	\item $\sim P\rightarrow ((\sim P\rightarrow \sim P)\rightarrow \sim P)$ \hfil PL1
 	\item $(\sim P\rightarrow (\sim P\rightarrow \sim P))\rightarrow(\sim P\rightarrow \sim P)$ \hfil 1,2,MP
 	\item $\sim P\rightarrow (\sim P\rightarrow \sim P)$ \hfil PL1
 	\item $\sim P\rightarrow \sim P$ \hfil 3,4 MP
 	\item $(\sim P\rightarrow \sim P)\rightarrow(\sim P\rightarrow P)\rightarrow P$ \hfil PL3 
 	\item $(\sim P\rightarrow P)\rightarrow P$ \hfil 5,6,MP
-\end{enumerate}	
+\end{enumerate}}
+
 \paragraph{(c)} We need to prove that $\sim\sim P\vdash P$
 
 %Bibliography: \standardbib just loads a regular bibliography. All files have been loaded in the preamble.

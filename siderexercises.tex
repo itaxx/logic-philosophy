@@ -198,6 +198,15 @@ And again we have derived a contradiction from our assumption. $\square$
 
 \subsection{Axiomatic proofs in PL}
 \paragraph{(a)} We need to prove that $\vdash P\rightarrow P$
+\begin{enumerate}
+	\item $(P\rightarrow((P\rightarrow P)\rightarrow P))\rightarrow ((P\rightarrow(P\rightarrow P))\rightarrow(P\rightarrow P))$ \hfil PL2
+	\item $P\rightarrow ((P\rightarrow P)\rightarrow P)$ \hfil PL1
+	\item $(P\rightarrow (P\rightarrow P))\rightarrow(P\rightarrow P)$ \hfil 1,2,MP
+	\item $P\rightarrow (P\rightarrow P)$ \hfil PL1
+	\item $P\rightarrow P$ \hfil 3,4 MP
+\end{enumerate}
+
+
 \paragraph{(b)} We need to prove that $\vdash(\simP\ritgharrow P)\rightarrow P$
 \paragraph{(c)} We need to prove that $\sim\sim P\vdash P$
 

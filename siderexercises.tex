@@ -185,6 +185,19 @@ $P, Q, R\Rightarrow P$ & (6 $\wedge$E) \\
 \end{fitch}
 \end{equation*}
 
+%Lea and I came up with a shorter way of doing this one.
+Or, alternatively, 
+\begin{equation*}
+\begin{fitch}
+$P\Rightarrow P$ & (RA) \\
+$Q\Rightarrow Q$ & (RA) \\
+$R\Rightarrow R$ & (RA) \\
+$Q, R\Rightarrow Q\wedge R$ & (2, 3, $\wedge$I) \\
+$P, Q, R\Rightarrow (Q\wedge R)\wedge P$ & (4 $\wedge$I) \\
+$P, Q, R\Rightarrow P$ & (5 $\wedge$E) \\
+\end{fitch}
+\end{equation*}
+
 \paragraph{(c)} We need to prove that $P\rightarrow Q, R\rightarrow Q \Rightarrow (P\vee R)\rightarrow Q$. 
 \begin{equation*}
 \begin{fitch}
